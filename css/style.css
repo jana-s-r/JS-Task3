@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    background-color: #fd6569;
+    padding: 10px;
+}
+
+.container {
+    padding: 10px;
+}
+.book-container {
+    padding: 15px;
+    width: 25%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.book-container h2 {
+    color: #fd6569;
+}
+
+.book-container button {
+    background-color: #fd6569;
+    color: black;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: none;
+}
+
+.add-button {
+    background-color: #fd6569;
+    color: black;
+    border-radius: 100%;
+    padding: 20px 30px;
+    font-size: 40px;
+    border: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.popup-overlay{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.8;
+    z-index: 1;
+    display: none;
+}
+
+.popup-box {
+    background-color: #fd6569;
+    width: 35%;
+    padding: 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 2;
+    display: none;
+}
+
+.popup-box input {
+    background:transparent;
+    border: none;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border-bottom: solid black 2px;
+}
+
+.popup-box textarea {
+    background:transparent;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border: solid black 2px;
+}
+
+.popup-box input::placeholder{
+    color: black;
+}
+
+.popup-box textarea::placeholder{
+    color: black;
+}
+
+
+.popup-box button {
+    background-color: black;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    margin: 5px;
+}
+
+.popup-box input:focus {
+    outline: none;
+}
+
+.popup-box textarea:focus {
+    outline: none;
+}
+
+
+@media only screen and (max-width:780px) {
+    .book-container {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width:630px) {
+    .book-container {
+        width: 70%;
+    }
+    .popup-box{
+        padding: 30px;
+    }
+    .popup-box h2,.popup-box input::placeholder,textarea::placeholder{
+        font-size: 12px;
+    }
+    .popup-box button {
+        font-size: 10px;
+        padding: 7px 10px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .popup-box{
+        padding: 20px;
+        width: 55%;
+        left: 20%;
+    }
+    .popup-box form{
+        padding-right: 20px;
+    }
+    .popup-box button {
+        font-size: 10px;
+        padding: 7px 10px;
+    }
+}
